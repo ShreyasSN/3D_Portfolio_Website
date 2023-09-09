@@ -32,6 +32,11 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     
+    if(form.message.length < 6) {
+      setLoading(false);
+          alert("Chutiya samjha kya! message length should be more than 5 characters.");
+          return;
+    }
     emailjs.send(
         'service_fmscp24',
         'template_1zocbd9',
