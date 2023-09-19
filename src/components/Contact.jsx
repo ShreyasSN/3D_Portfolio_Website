@@ -34,7 +34,7 @@ const Contact = () => {
     
     if(form.message.length < 6) {
       setLoading(false);
-          alert("Chutiya samjha kya! message length should be more than 5 characters.");
+          alert("The length of the message should exceed five characters.");
           return;
     }
     emailjs.send(
